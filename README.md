@@ -1,6 +1,13 @@
-# Car Dealer API
+# Car Dealer API and Frontend
 
-This is a Web API that allows dealers to manage their car stocks. It supports adding/removing cars, listing cars and stock levels, updating car stock levels, and searching cars by make and model.
+This project consists of a Car Dealer API built with ASP.NET Core and a React frontend that allows dealers to manage their car stocks.
+
+
+## Project Structure
+
+- `backend/`: Contains the ASP.NET Core Web API
+- `frontend/`: Contains the React frontend application
+
 
 ## Features
 
@@ -11,16 +18,26 @@ This is a Web API that allows dealers to manage their car stocks. It supports ad
 
 ## Technologies Used
 
+### Backend
 - ASP.NET Core 6.0
 - Entity Framework Core (In-Memory Provider)
 - Swagger / OpenAPI
 - Docker
 
+### Frontend
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Query
+
 ## Running the Application
+
+### Backend
 
 ### Without Docker
 
-1. Ensure you have .NET 6.0 SDK installed on your machine.
+1. Ensure you have .NET 8.0 SDK installed on your machine.
 2. Clone this repository.
 3. Navigate to the project directory in your terminal.
 4. Run the following command:
@@ -57,8 +74,10 @@ docker run -d -p 8080:8080 -e ASPNETCORE_ENVIRONMENT=Development --name cardeale
 
 ## Notes
 
-- The application uses an in-memory database, so data will be lost when the application is stopped.
+- The backend application uses an in-memory database, so data will be lost when the application is stopped.
 - Each dealer has a unique `DealerId` which is used to isolate their data from other dealers.
+- The frontend allows you to switch between different dealer IDs to view and manage their respective inventories.
+
 
 ## Docker Image
 
@@ -66,6 +85,25 @@ If you want to pull the pre-built Docker image from Docker Hub, you can use the 
 ```
 docker pull oliver1026/cardealerapi:latest
 ```
+
+
+## Building from Source
+
+### Backend
+
+1. Navigate to the `backend` directory.
+2. Build the Docker image:
+```
+docker build -t oliver1026/cardealerapi:latest .
+```
+### Frontend
+
+1. Navigate to the `frontend` directory.
+2. Build the production version:
+```
+npm run build
+```
+3. The built files will be in the `dist` directory.
 
 ## License
 
