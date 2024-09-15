@@ -19,7 +19,7 @@ This project consists of a Car Dealer API built with ASP.NET Core and a React fr
 ## Technologies Used
 
 ### Backend
-- ASP.NET Core 6.0
+- ASP.NET Core 8.0
 - Entity Framework Core (In-Memory Provider)
 - Swagger / OpenAPI
 - Docker
